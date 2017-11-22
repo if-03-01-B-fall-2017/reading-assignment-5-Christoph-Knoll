@@ -1,0 +1,14 @@
+body {
+  font-family: monospace;
+  background-color: gray;
+}
+ol {
+  list-style-type: decimal;
+  padding: 20px;
+}
+
+li:hover {
+  font-size: 120%;
+  color: white;
+  background-color: #333
+}

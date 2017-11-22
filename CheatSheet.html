@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html style="font-family: sans-serif">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cheatsheet by Christoph Knoll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <article class="html">
+    <h1>HTML Basics</h1>
+    <section>
+      <p>
+        <code>&lt;!DOCTYPE html&gt;</code> is used to declare a <strong>Html 5</strong> file.<br> All the content that has to do with <strong>html</strong> and the layout itself belongs into the <code>&lt;html&gt;&lt;/html&gt;</code> tag. <br> The sections
+        on the top of the page like <code>&lt;title&gt;</code> and the metainformation <code>&lt;meta charset="utf-8"&gt;</code> belong into the header.<br> Another crucial thing that is done in the header is linking to the <strong>CSS</strong> file which
+        will be requiered later on.<br>
+        <pre class="html">
+            <code>
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;title&gt;Hello World!&lt;/title&gt;
+              &lt;/head&gt;
+            </code>
+          </pre>
+      </p>
+    </section>
+
+    <section>
+      <p>
+        The <code>&lt;body&gt;</code> contains the actual content of the Page. A short example of a webpage:
+        <pre class="html">
+            <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;title&gt;Hello World!&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;article class="Hello_World"&gt;
+                    &lt;section&gt;
+                      &lt;h1&gt;Hello World&lt;/h1&gt;
+                      &lt;p&gt;&lt;em&gt;Hello&lt;/em&gt; &lt;strong&gt;World!&lt;/strong&gt;&lt;/p&gt;
+                      &lt;pre style="white-space: pre-line"&gt;
+                        &lt;code&gt;
+                          Hello
+                          World!
+                        &lt;/code&gt;
+                      &lt;/pre&gt;
+
+                    &lt;/section&gt;
+                  &lt;/article&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre> Which looks like this: <br>
+        <iframe src="example.html" width="600" height="200"></iframe>
+      </p>
+    </section>
+  </article>
+
+  <article class="css">
+    <h1>CSS Basics</h1>
+    <section>
+      <p>
+        We already have created the basic layout.<br> Now its time for styling the webpage using the external Stylesheet. In our case it's called <strong>stylesheet.css</strong>.<br>
+        <h3>HTML</h3>
+        <pre class="html">
+            <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;title&gt;Hello World!&lt;/title&gt;
+                  &lt;link rel="stylesheet" href="stylesheet.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;article class="Hello_World"&gt;
+                    &lt;section&gt;
+                      &lt;h1&gt;Hello World&lt;/h1&gt;
+                      &lt;p&gt;&lt;em&gt;Hello&lt;/em&gt; &lt;strong&gt;World!&lt;/strong&gt;&lt;/p&gt;
+                      &lt;pre&gt;
+                        &lt;code&gt;
+                          Hello
+                          World!
+                        &lt;/code&gt;
+                      &lt;/pre&gt;
+                    &lt;/section&gt;
+                  &lt;/article&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        <h3>CSS</h3>
+        <pre class="css">
+          <code>
+            body {
+              font-family: monospace;
+            }
+            h1 {
+              border-left : 5px solid red;
+              text-indent: 5px;
+              background-color: lightgray;
+            }
+            article p {
+              text-align: center;
+              text-shadow: 2px 2px lightgrey;
+            }
+            article code {
+                color: red;
+            }
+            </code>
+          </pre>
+        <iframe src="example_2.html" width="600" height="200"></iframe>
+      </p>
+    </section>
+  </article>
+  <article class="html">
+    <h1>HTML Lists</h1>
+    <section>
+      <h3>Unordered List</h3>
+      <p>The unoredered list is like the name already says: not oredered!</p>
+      <pre class="html">
+        <code>
+          &lt;ul&gt;
+            &lt;li&gt;Spam&lt;/li&gt;
+            &lt;li&gt;and&lt;/li&gt;
+            &lt;li&gt;Eggs&lt;/li&gt;
+          &lt;/ul&gt;
+        </code>
+      </pre>
+      <h3>Ordered List</h3>
+      <p>
+        The ordered list is useful to display any sorted kind of data on the webpage.<br>
+        There are different types: <em><code>type="1" type="A" type="a" type="I" type="i"</code></em>
+      </p>
+      <pre class="html">
+        <code>
+          &lt;ol type="1"&gt;
+            &lt;li&gt;Spam&lt;/li&gt;
+            &lt;li&gt;Eggs&lt;/li&gt;
+            &lt;li&gt;Sausage&lt;/li&gt;
+          &lt;/ol&gt;
+        </code>
+      </pre>
+      <p>You can also create Nested list which simply means <strong>lists in lists</strong>.</p>
+    </section>
+  </article>
+
+  <article class="css">
+    <h1>CSS Lists</h1>
+    <section>
+      <h3>It's time to style your list</h3>
+      <p>Using CSS you can define a margin, padding or the background color. You can also define how to display the list with display.</p>
+      <h3>Here some Examples</h3>
+      <pre class="css">
+        <code>
+          body {
+            font-family: fantasy;
+          }
+
+          ul {
+            list-style-type: none;
+            border: 5px solid black;
+            border-radius: 10px;
+            background-color: gray;
+            overflow: hidden;
+          }
+
+          li {
+                display: block;
+                float: left;
+                padding-left: 10px;
+          }
+
+        </code>
+      </pre>
+      <iframe src="ul.html" width="600" height="200"></iframe>
+      <pre class="css">
+        <code>
+          body {
+            font-family: monospace;
+            background-color: gray;
+          }
+          ol {
+            list-style-type: decimal;
+            padding: 20px;
+          }
+
+          li:hover {
+            font-size: 120%;
+            color: white;
+            background-color: #333
+          }
+        </code>
+      </pre>
+      <iframe src="ol.html" width="600" height="200"></iframe>
+    </section>
+  </article>
+  <article class="html">
+    <h1>HTML Tables</h1>
+    <section>
+      <h3>The Table</h3>
+      <p>
+        A Table is defined with the <code>&lt;table&gt;</code> tag. <br>
+        You can create a row with <code>&lt;tr&gt;</code>. <br>
+        You can also define a table header <code>&lt;th&gt;</code> and a cell <code>&lt;td&gt;</code>
+      </p>
+      <pre class="html">
+        <code>
+          &lt;table&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Index&lt;/th&gt;
+              &lt;th&gt;Name&lt;/th&gt;
+              &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;1&lt;/td&gt;
+              &lt;td&gt;Newton&lt;/td&gt;
+              &lt;td&gt;291&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;2&lt;/td&gt;
+              &lt;td&gt;Einstein&lt;/td&gt;
+              &lt;td&gt;138&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;3&lt;/td&gt;
+              &lt;td&gt;Hawking&lt;/td&gt;
+              &lt;td&gt;75&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        </code>
+      </pre>
+    </section>
+  </article>
+  <article class="css">
+    <h1>CSS Tables</h1>
+    <section>
+      <h3>The table</h3>
+      <p>Using CSS you can style your Table</p>
+      <pre class="css">
+        <code>
+          table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+          }
+
+          td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+          }
+
+          tr:nth-child(even) {
+              background-color: #dddddd;
+          }
+        </code>
+      </pre>
+      <iframe src="table.html" width="600" height="200"></iframe>
+    </section>
+  </article>
+  <article class="css">
+      <h1><strong>Classes</strong> and <strong>ID</strong>s</h1>
+      <section>
+        <h3><strong>ID</strong>s</h3>
+        <p>You can use <strong>ID</strong>s to format one single element via <strong>CSS</strong>.</p>
+        <p>For example:</p>
+        <pre class="html">
+          <code>
+            &lt;h1 id="headline"&gt; &lt;/h1&gt;
+          </code>
+        </pre>
+        <pre class="css">
+          <code>
+            .headline{
+              color: white;
+            }
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h3><strong>Class</strong></h3>
+        <p>You can use <strong>Class</strong>es to format all elements of it via <strong>CSS</strong>.</p>
+        <p>For example:</p>
+        <pre class="html">
+          <code>
+            &lt;h1 class="black"&gt; &lt;/h1&gt;
+          </code>
+        </pre>
+        <pre class="css">
+          <code>
+            .black{
+              color: black;
+            }
+          </code>
+        </pre>
+      </section>
+  </article>
+</body>
+
+</html>

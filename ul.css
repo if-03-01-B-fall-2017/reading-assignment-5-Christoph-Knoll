@@ -1,0 +1,17 @@
+body {
+  font-family: fantasy;
+}
+
+ul {
+  list-style-type: none;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: gray;
+  overflow: hidden;
+}
+
+li {
+      display: block;
+      float: left;
+      padding-left: 10px;
+}
